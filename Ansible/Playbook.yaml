@@ -1,0 +1,5 @@
+- name: ping the server
+  hosts: catalogue  # which server we want to connect
+  tasks:
+    - name: ping
+      ansible.builtin.ping:
