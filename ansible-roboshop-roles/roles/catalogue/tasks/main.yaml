@@ -6,10 +6,17 @@
   tags:
     - deployment
 
+- name: app setup
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: nodejs.yaml
+  tags:
+  - deployment
+
 - name: copy mongo repo
   ansible.builtin.copy:
     src: mongo.repo
-    dest: /etc/yum.repos.d/mongo.repo
+    dest: /etc/yum.repos.d/.repomongo
   tags:
     - deployment  
 
