@@ -2,5 +2,5 @@ ARG VERSION
 FROM almalinux:${VERSION:-9}
 ARG COURSE="devops" \
     DOURATION="10 hours" 
-RUN echo "course is: ${COURSE} and douration is: ${DOURATION} "       
+RUN echo "course is: ${COURSE} and douration is: ${DOURATION} version is: ${VERSION} "       
 CMD ["sleep", "1000"]
