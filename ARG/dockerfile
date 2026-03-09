@@ -1,7 +1,9 @@
 ARG VERSION
 FROM almalinux:${VERSION:-9}
+# below env we cant access inside container.
 ARG COURSE="devops" \
     DOURATION="10 hours" 
+# we can access nelow course env varible in side the container    
 ENV COURSE=${COURSE}    
 RUN echo "course is: ${COURSE} and douration is: ${DOURATION} version is: ${VERSION} "       
 CMD ["sleep", "1000"]
