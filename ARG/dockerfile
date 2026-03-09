@@ -2,5 +2,6 @@ ARG VERSION
 FROM almalinux:${VERSION:-9}
 ARG COURSE="devops" \
     DOURATION="10 hours" 
+ENV COURSE=${COURSE}    
 RUN echo "course is: ${COURSE} and douration is: ${DOURATION} version is: ${VERSION} "       
 CMD ["sleep", "1000"]
